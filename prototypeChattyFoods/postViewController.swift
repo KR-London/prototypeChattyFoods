@@ -13,6 +13,7 @@ class postViewController: UIViewController {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var mainPic: UIImageView!
     @IBAction func likeButtonPressed(_ sender: UIButton) {
+        print("I like this")
     }
     @IBOutlet weak var likeButton: UIButton!
     

@@ -26,7 +26,21 @@ class prototypeChattyFoodsUITests: XCTestCase {
     func testExample() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        setupSnapshot(app)
         app.launch()
+        snapshot("ChooseCharacter")
+        app.buttons["Play as this character"].tap()
+        snapshot("ChooseFriends")
+        app.buttons["See your news feed"].tap()
+        snapshot("MainFeed")
+        let scrollViewsQuery = app.scrollViews
+        scrollViewsQuery.children(matching: .other).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.swipeUp()
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Post something"].tap()
+        tabBarsQuery.buttons["Your Liked Posts"].tap()
+        tabBarsQuery.buttons["Your Feed"].tap()
+        scrollViewsQuery.children(matching: .other).element(boundBy: 2).buttons["heart"].tap()
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

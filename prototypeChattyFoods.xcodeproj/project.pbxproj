@@ -48,6 +48,7 @@
 		4411AC022441FA0400C20981 /* tenor.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4411AC012441FA0400C20981 /* tenor.gif */; };
 		4411AC042441FB6000C20981 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411AC032441FB6000C20981 /* extensions.swift */; };
 		4411AC062442137400C20981 /* customNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411AC052442137400C20981 /* customNavigationBar.swift */; };
+		44164F4E244C60B00082E050 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44164F4D244C60B00082E050 /* SnapshotHelper.swift */; };
 		441AFAB4243AEC2B00227201 /* postViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441AFAB3243AEC2B00227201 /* postViewController.swift */; };
 		44EDDD54243A4B16002E41F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDDD53243A4B16002E41F9 /* AppDelegate.swift */; };
 		44EDDD56243A4B16002E41F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDDD55243A4B16002E41F9 /* SceneDelegate.swift */; };
@@ -121,6 +122,7 @@
 		4411AC012441FA0400C20981 /* tenor.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tenor.gif; sourceTree = "<group>"; };
 		4411AC032441FB6000C20981 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		4411AC052442137400C20981 /* customNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customNavigationBar.swift; sourceTree = "<group>"; };
+		44164F4D244C60B00082E050 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		441AFAB3243AEC2B00227201 /* postViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postViewController.swift; sourceTree = "<group>"; };
 		44EDDD50243A4B16002E41F9 /* prototypeChattyFoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prototypeChattyFoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EDDD53243A4B16002E41F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				44EDDD7A243A4B17002E41F9 /* prototypeChattyFoodsUITests.swift */,
+				44164F4D244C60B00082E050 /* SnapshotHelper.swift */,
 				44EDDD7C243A4B17002E41F9 /* Info.plist */,
 			);
 			path = prototypeChattyFoodsUITests;
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44EDDD7B243A4B17002E41F9 /* prototypeChattyFoodsUITests.swift in Sources */,
+				44164F4E244C60B00082E050 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -597,7 +601,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
