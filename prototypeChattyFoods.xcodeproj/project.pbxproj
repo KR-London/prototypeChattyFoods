@@ -49,6 +49,7 @@
 		4411AC042441FB6000C20981 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411AC032441FB6000C20981 /* extensions.swift */; };
 		4411AC062442137400C20981 /* customNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411AC052442137400C20981 /* customNavigationBar.swift */; };
 		44164F4E244C60B00082E050 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44164F4D244C60B00082E050 /* SnapshotHelper.swift */; };
+		44164F8F244C8AA60082E050 /* avatarCustomiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44164F8E244C8AA60082E050 /* avatarCustomiseViewController.swift */; };
 		441AFAB4243AEC2B00227201 /* postViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441AFAB3243AEC2B00227201 /* postViewController.swift */; };
 		44EDDD54243A4B16002E41F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDDD53243A4B16002E41F9 /* AppDelegate.swift */; };
 		44EDDD56243A4B16002E41F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDDD55243A4B16002E41F9 /* SceneDelegate.swift */; };
@@ -123,6 +124,8 @@
 		4411AC032441FB6000C20981 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		4411AC052442137400C20981 /* customNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customNavigationBar.swift; sourceTree = "<group>"; };
 		44164F4D244C60B00082E050 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		44164F8E244C8AA60082E050 /* avatarCustomiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatarCustomiseViewController.swift; sourceTree = "<group>"; };
+		44164F90244CCAEF0082E050 /* 07891284.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 07891284.ttf; sourceTree = "<group>"; };
 		441AFAB3243AEC2B00227201 /* postViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postViewController.swift; sourceTree = "<group>"; };
 		44EDDD50243A4B16002E41F9 /* prototypeChattyFoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prototypeChattyFoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EDDD53243A4B16002E41F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -199,7 +202,9 @@
 				4411ABCD2440F57D00C20981 /* whoToFollowViewController.swift */,
 				441AFAB3243AEC2B00227201 /* postViewController.swift */,
 				44EDDD59243A4B16002E41F9 /* SecondViewController.swift */,
+				44164F90244CCAEF0082E050 /* 07891284.ttf */,
 				44EDDD5B243A4B16002E41F9 /* Main.storyboard */,
+				44164F8E244C8AA60082E050 /* avatarCustomiseViewController.swift */,
 				4411AC052442137400C20981 /* customNavigationBar.swift */,
 				4411ABFD2440FE6200C20981 /* ChooseAvatarViewController.swift */,
 				4411ABBB2440866F00C20981 /* images-2.jpeg */,
@@ -435,6 +440,7 @@
 				4411ABFE2440FE6200C20981 /* ChooseAvatarViewController.swift in Sources */,
 				4411AC062442137400C20981 /* customNavigationBar.swift in Sources */,
 				44EDDD58243A4B16002E41F9 /* FirstViewController.swift in Sources */,
+				44164F8F244C8AA60082E050 /* avatarCustomiseViewController.swift in Sources */,
 				4411ABCE2440F57D00C20981 /* whoToFollowViewController.swift in Sources */,
 				441AFAB4243AEC2B00227201 /* postViewController.swift in Sources */,
 				4411AC042441FB6000C20981 /* extensions.swift in Sources */,

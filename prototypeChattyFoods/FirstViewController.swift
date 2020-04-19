@@ -65,6 +65,7 @@ class FirstViewController: UIViewController {
             postMatrix[x].view.translatesAutoresizingMaskIntoConstraints = false
             postMatrix[x].view.isUserInteractionEnabled = true
             scrollView.addSubview(postMatrix[x].view)
+            addChild(postMatrix[x])
         
             postMatrix[x].mainPic.image = posts[x]?.1
             postMatrix[x].profilePic.image = posts[x]?.0
@@ -72,9 +73,10 @@ class FirstViewController: UIViewController {
            // post.mainPic.image = posts[1]?.0
         
             NSLayoutConstraint.activate([
-                postMatrix[x].view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
-                postMatrix[x].view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 10),
-                postMatrix[x].view.heightAnchor.constraint(equalTo: postMatrix[x].view.widthAnchor, multiplier: 1.3)
+                postMatrix[x].view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+                postMatrix[x].view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+                postMatrix[x].view.heightAnchor.constraint(equalTo: postMatrix[x].view.widthAnchor, constant: 10),
+                postMatrix[x].view.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor)
             ])
         
             if x == 0{
@@ -90,29 +92,7 @@ class FirstViewController: UIViewController {
             //let gif = UIImage.gifImageWithURL(gifUrl: gifURL)
             postMatrix[x].mainPic.image = gif
         }
-        
-           // postMatrix[x].didMove(toParent: self)
        }
-        
-//        let post2 = storyboard!.instantiateViewController(identifier: "postTemplate") as! postViewController
-//          addChild(post2)
-//
-//          post2.view.translatesAutoresizingMaskIntoConstraints = false
-//
-//          scrollView.addSubview(post2.view)
-//
-//          post2.mainPic.image = #imageLiteral(resourceName: "images-2.jpeg")
-//          post2.profilePic.image = #imageLiteral(resourceName: "egg.jpg")
-//
-//
-//          NSLayoutConstraint.activate([
-//              post2.view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
-//              post2.view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 10),
-//              post2.view.topAnchor.constraint(equalTo:post.view.bottomAnchor, constant: 10),
-//              post2.view.heightAnchor.constraint(equalTo: post.view.widthAnchor, multiplier: 1.3)
-//          ])
-//
-//          post2.didMove(toParent: self)
         
     }
 

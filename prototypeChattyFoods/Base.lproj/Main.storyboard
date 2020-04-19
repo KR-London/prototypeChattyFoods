@@ -14,19 +14,7 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaA-Jl-d2l">
-                                <rect key="frame" x="20" y="44" width="374" height="769"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="dZa-64-J7V"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="fcb-9l-BuF"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="YaA-Jl-d2l" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="bvD-L5-0W6"/>
-                            <constraint firstItem="YaA-Jl-d2l" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="ij9-Zw-8u9"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="YaA-Jl-d2l" secondAttribute="trailing" constant="20" id="vPX-wu-ROY"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Your Feed" image="house.fill" catalog="system" id="acW-dT-cKf"/>
@@ -39,67 +27,69 @@
         <scene sceneID="2KP-z6-0Gm">
             <objects>
                 <viewController storyboardIdentifier="postTemplate" id="hDW-ld-pii" customClass="postViewController" customModule="prototypeChattyFoods" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oS8-uz-eMz">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="oS8-uz-eMz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tUF-hJ-qRZ">
-                                <rect key="frame" x="20" y="44" width="414" height="517"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lfu-0c-P6C">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="79"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="79" id="M7W-i9-gQQ"/>
-                                            <constraint firstAttribute="width" constant="76" id="M9m-Qs-cG8"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oco-gF-e12">
-                                        <rect key="frame" x="0.0" y="81" width="374" height="374"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="374" id="QBO-yZ-pXY"/>
-                                            <constraint firstAttribute="width" constant="374" id="jAj-aD-dqv"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="AR4-7I-1D0">
-                                        <rect key="frame" x="0.0" y="457" width="296" height="60"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-Ts-5QY">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="WPJ-0A-ipf"/>
-                                                    <constraint firstAttribute="height" constant="60" id="psq-TO-by6"/>
-                                                </constraints>
-                                                <state key="normal" image="heart" catalog="system"/>
-                                                <connections>
-                                                    <action selector="likeButtonPressed:" destination="hDW-ld-pii" eventType="touchUpInside" id="r8U-KB-QV5"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUV-Vr-QgA">
-                                                <rect key="frame" x="118" y="0.0" width="60" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                <state key="normal" image="square.and.arrow.up" catalog="system">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4m-sv-wdg">
-                                                <rect key="frame" x="236" y="0.0" width="60" height="60"/>
-                                                <state key="normal" image="pencil.and.ellipsis.rectangle" catalog="system"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oco-gF-e12">
+                                <rect key="frame" x="0.0" y="49" width="414" height="810"/>
                                 <constraints>
-                                    <constraint firstItem="oco-gF-e12" firstAttribute="leading" secondItem="Lfu-0c-P6C" secondAttribute="leading" id="QqW-IK-9cz"/>
+                                    <constraint firstAttribute="width" secondItem="oco-gF-e12" secondAttribute="height" multiplier="1:1" id="awg-mP-AKx"/>
                                 </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lfu-0c-P6C">
+                                <rect key="frame" x="167" y="49" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="M7W-i9-gQQ"/>
+                                    <constraint firstAttribute="width" constant="80" id="M9m-Qs-cG8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="AR4-7I-1D0" userLabel="buttonStack">
+                                <rect key="frame" x="59" y="797" width="296" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-Ts-5QY" customClass="postButton" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="WPJ-0A-ipf"/>
+                                            <constraint firstAttribute="height" constant="60" id="psq-TO-by6"/>
+                                        </constraints>
+                                        <state key="normal" image="heart" catalog="system"/>
+                                        <state key="selected" image="heart.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="likeButtonPressed:" destination="hDW-ld-pii" eventType="touchUpInside" id="r8U-KB-QV5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUV-Vr-QgA" customClass="postButton" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                        <rect key="frame" x="118" y="0.0" width="60" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" image="square.and.arrow.up" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4m-sv-wdg" customClass="postButton" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="0.0" width="60" height="60"/>
+                                        <state key="normal" image="pencil.and.ellipsis.rectangle" catalog="system"/>
+                                    </button>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tUF-hJ-qRZ" firstAttribute="trailing" secondItem="BuV-yU-IPc" secondAttribute="trailing" constant="20" id="BWA-3C-fUc"/>
-                            <constraint firstItem="tUF-hJ-qRZ" firstAttribute="leading" secondItem="BuV-yU-IPc" secondAttribute="leading" constant="20" id="McC-R0-SjY"/>
-                            <constraint firstItem="tUF-hJ-qRZ" firstAttribute="top" secondItem="BuV-yU-IPc" secondAttribute="top" id="NhW-El-Oli"/>
-                            <constraint firstItem="BuV-yU-IPc" firstAttribute="bottom" secondItem="tUF-hJ-qRZ" secondAttribute="bottom" priority="750" id="Qgj-g5-pu6"/>
+                            <constraint firstItem="AR4-7I-1D0" firstAttribute="bottom" secondItem="oco-gF-e12" secondAttribute="bottom" constant="-10" id="0fP-hm-gUK"/>
+                            <constraint firstItem="Lfu-0c-P6C" firstAttribute="top" secondItem="oco-gF-e12" secondAttribute="top" id="JJ6-ft-zJI"/>
+                            <constraint firstItem="BuV-yU-IPc" firstAttribute="bottom" secondItem="AR4-7I-1D0" secondAttribute="bottom" constant="5" id="cJv-N9-h6l"/>
+                            <constraint firstItem="AR4-7I-1D0" firstAttribute="centerX" secondItem="BuV-yU-IPc" secondAttribute="centerX" id="e7c-fl-F7C"/>
+                            <constraint firstItem="oco-gF-e12" firstAttribute="top" secondItem="BuV-yU-IPc" secondAttribute="top" constant="5" id="gMf-91-2Ip"/>
+                            <constraint firstItem="oco-gF-e12" firstAttribute="width" secondItem="BuV-yU-IPc" secondAttribute="width" id="hDB-F9-GLn"/>
+                            <constraint firstItem="AR4-7I-1D0" firstAttribute="width" secondItem="BuV-yU-IPc" secondAttribute="width" multiplier="0.67" priority="750" id="idG-gg-jiS"/>
+                            <constraint firstItem="oco-gF-e12" firstAttribute="width" secondItem="BuV-yU-IPc" secondAttribute="width" id="jg2-e2-DxF"/>
+                            <constraint firstItem="Lfu-0c-P6C" firstAttribute="leading" secondItem="oco-gF-e12" secondAttribute="leading" id="opt-Gb-KOo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BuV-yU-IPc"/>
                     </view>
@@ -121,21 +111,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzJ-wc-OvG">
-                                <rect key="frame" x="38" y="461" width="339" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rP-Nh-182">
-                                <rect key="frame" x="38" y="153" width="339" height="248"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQc-h8-RNv">
-                                <rect key="frame" x="38" y="568" width="339" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Post"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="6Vn-M9-nQH">
+                                <rect key="frame" x="38" y="153" width="339" height="444"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rP-Nh-182">
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="248"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzJ-wc-OvG">
+                                        <rect key="frame" x="0.0" y="314" width="339" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQc-h8-RNv">
+                                        <rect key="frame" x="0.0" y="414" width="339" height="30"/>
+                                        <state key="normal" title="Post"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
@@ -182,22 +174,41 @@
                     <view key="view" contentMode="scaleToFill" id="UB9-pm-q0D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.6705882352941176" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="e64-Gp-Elb"/>
                     </view>
                     <navigationItem key="navigationItem" title="ChattyFoods" id="GLY-Fc-Fjm"/>
                     <connections>
-                        <segue destination="Q6G-Z6-giZ" kind="show" identifier="toWhoToFollow" id="qPr-FO-PuS"/>
+                        <segue destination="PDB-LG-8s9" kind="show" identifier="toWhoToFollow" id="x5n-Cu-2LC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZD-Ky-hDv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2570" y="-74"/>
+            <point key="canvasLocation" x="-4048" y="-74"/>
+        </scene>
+        <!--Avatar Customise View Controller-->
+        <scene sceneID="gpT-3K-yrh">
+            <objects>
+                <viewController id="PDB-LG-8s9" customClass="avatarCustomiseViewController" customModule="prototypeChattyFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jh5-8z-i3U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.6705882352941176" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Cew-7K-fbm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UhF-dV-Ydw"/>
+                    <connections>
+                        <segue destination="Q6G-Z6-giZ" kind="show" identifier="temp" id="Hkc-X1-P1V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7jv-7E-mTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3219" y="-538"/>
         </scene>
         <!--ChattyFoods-->
         <scene sceneID="fCi-HH-2JF">
             <objects>
-                <viewController id="Q6G-Z6-giZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chooseFriends" id="Q6G-Z6-giZ" customClass="whoToFollowViewController" customModule="prototypeChattyFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zQg-j4-sGw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +216,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="BAR-fn-zck">
                                 <rect key="frame" x="20" y="108" width="374" height="480"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="106" translatesAutoresizingMaskIntoConstraints="NO" id="2DS-un-cwI" userLabel="UserPickStack">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2DS-un-cwI" userLabel="UserPickStack">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7715164b3215cccda8f7994f9ca25d8e_clipart-face-carrot-clipart-face-carrot-transparent-free-for-_806-1084.png" translatesAutoresizingMaskIntoConstraints="NO" id="UXK-MD-eH0">
@@ -220,14 +231,13 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who will you follow? " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Vi-U8-lZ4">
-                                                <rect key="frame" x="206" y="40" width="168" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who are Frank's friends?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Vi-U8-lZ4" customClass="myLabel" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="40" width="254" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.72941176470000002" green="0.94901960780000005" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-Hu-A3P">
                                         <rect key="frame" x="0.0" y="140" width="374" height="340"/>
@@ -368,10 +378,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLO-At-vM9">
-                                <rect key="frame" x="139" y="417" width="135" height="61"/>
-                                <color key="backgroundColor" red="0.72941176470000002" green="0.94901960780000005" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="See your news feed">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLO-At-vM9" customClass="myButton" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                <rect key="frame" x="20" y="668" width="374" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0OB-6i-Owz"/>
+                                </constraints>
+                                <state key="normal" title="Check Out Frank's Feed">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -379,11 +391,11 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BAR-fn-zck" firstAttribute="leading" secondItem="dOC-lb-JaF" secondAttribute="leading" constant="20" id="5HG-Bx-1vS"/>
                             <constraint firstItem="qLO-At-vM9" firstAttribute="trailing" secondItem="BAR-fn-zck" secondAttribute="trailing" id="Djt-BC-Yy3"/>
-                            <constraint firstItem="qLO-At-vM9" firstAttribute="top" secondItem="BAR-fn-zck" secondAttribute="bottom" constant="20" id="PyU-OV-pQW"/>
+                            <constraint firstItem="qLO-At-vM9" firstAttribute="top" secondItem="BAR-fn-zck" secondAttribute="bottom" constant="80" id="PyU-OV-pQW"/>
                             <constraint firstItem="BAR-fn-zck" firstAttribute="top" secondItem="dOC-lb-JaF" secondAttribute="top" constant="20" id="X6d-20-XLN"/>
                             <constraint firstItem="qLO-At-vM9" firstAttribute="leading" secondItem="BAR-fn-zck" secondAttribute="leading" id="jTK-KC-Q0g"/>
                             <constraint firstItem="dOC-lb-JaF" firstAttribute="trailing" secondItem="BAR-fn-zck" secondAttribute="trailing" constant="20" id="qDU-Hu-x72"/>
@@ -395,6 +407,9 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="hideBackButton" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
+                    <connections>
+                        <outlet property="proceed" destination="qLO-At-vM9" id="dLa-GE-n9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvr-ia-dZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -407,7 +422,8 @@
                     <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="7715164b3215cccda8f7994f9ca25d8e_clipart-face-carrot-clipart-face-carrot-transparent-free-for-_806-1084.png" id="lnR-lW-wiu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="K1i-Ks-ZEe" kind="relationship" relationship="rootViewController" id="SUy-XE-y7n"/>
@@ -415,7 +431,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BxE-Cp-afg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3586" y="-74"/>
+            <point key="canvasLocation" x="-4932" y="-74"/>
         </scene>
         <!--ChattyFoods-->
         <scene sceneID="yl2-sM-qoP">
@@ -450,6 +466,7 @@
         <image name="chicken.jpeg" width="144" height="96"/>
         <image name="egg.jpg" width="275" height="183"/>
         <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="heart.fill" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="images-6.jpeg" width="179" height="282"/>
         <image name="milk.jpg" width="2237" height="1704"/>
