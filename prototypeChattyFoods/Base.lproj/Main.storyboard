@@ -1,85 +1,441 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="108-Fr-B6n">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Your Feed-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="prototypeChattyFoods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuO-1s-xW9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="17o-xJ-uIU"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaA-Jl-d2l">
+                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="dZa-64-J7V"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fcb-9l-BuF"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="LuO-1s-xW9" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="LfE-gD-ndS"/>
+                            <constraint firstItem="LuO-1s-xW9" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="QQC-ch-rjc"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="LuO-1s-xW9" secondAttribute="trailing" id="bW3-Ug-HBn"/>
+                            <constraint firstItem="YaA-Jl-d2l" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="bvD-L5-0W6"/>
+                            <constraint firstItem="YaA-Jl-d2l" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="ij9-Zw-8u9"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="YaA-Jl-d2l" secondAttribute="trailing" constant="20" id="vPX-wu-ROY"/>
+                            <constraint firstItem="YaA-Jl-d2l" firstAttribute="top" secondItem="LuO-1s-xW9" secondAttribute="bottom" id="xb1-iv-AQY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Your Feed" image="house.fill" catalog="system" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
-        <!--Second-->
-        <scene sceneID="wg7-f3-ORb">
+        <!--Post View Controller-->
+        <scene sceneID="2KP-z6-0Gm">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="postTemplate" id="hDW-ld-pii" customClass="postViewController" customModule="prototypeChattyFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oS8-uz-eMz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tUF-hJ-qRZ">
+                                <rect key="frame" x="20" y="44" width="414" height="517"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lfu-0c-P6C">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="79"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="79" id="M7W-i9-gQQ"/>
+                                            <constraint firstAttribute="width" constant="76" id="M9m-Qs-cG8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oco-gF-e12">
+                                        <rect key="frame" x="0.0" y="81" width="374" height="374"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="374" id="QBO-yZ-pXY"/>
+                                            <constraint firstAttribute="width" constant="374" id="jAj-aD-dqv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="AR4-7I-1D0">
+                                        <rect key="frame" x="0.0" y="457" width="296" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-Ts-5QY">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="WPJ-0A-ipf"/>
+                                                    <constraint firstAttribute="height" constant="60" id="psq-TO-by6"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="likeButtonPressed:" destination="hDW-ld-pii" eventType="touchUpInside" id="r8U-KB-QV5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUV-Vr-QgA">
+                                                <rect key="frame" x="118" y="0.0" width="60" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4m-sv-wdg">
+                                                <rect key="frame" x="236" y="0.0" width="60" height="60"/>
+                                                <state key="normal" image="pencil.and.ellipsis.rectangle" catalog="system"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oco-gF-e12" firstAttribute="leading" secondItem="Lfu-0c-P6C" secondAttribute="leading" id="QqW-IK-9cz"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="tUF-hJ-qRZ" firstAttribute="trailing" secondItem="BuV-yU-IPc" secondAttribute="trailing" constant="20" id="BWA-3C-fUc"/>
+                            <constraint firstItem="tUF-hJ-qRZ" firstAttribute="leading" secondItem="BuV-yU-IPc" secondAttribute="leading" constant="20" id="McC-R0-SjY"/>
+                            <constraint firstItem="tUF-hJ-qRZ" firstAttribute="top" secondItem="BuV-yU-IPc" secondAttribute="top" id="NhW-El-Oli"/>
+                            <constraint firstItem="BuV-yU-IPc" firstAttribute="bottom" secondItem="tUF-hJ-qRZ" secondAttribute="bottom" priority="750" id="Qgj-g5-pu6"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="BuV-yU-IPc"/>
+                    </view>
+                    <connections>
+                        <outlet property="likeButton" destination="a9q-Ts-5QY" id="8RI-Ox-OMV"/>
+                        <outlet property="mainPic" destination="oco-gF-e12" id="oKp-xG-gcj"/>
+                        <outlet property="profilePic" destination="Lfu-0c-P6C" id="kps-zX-uiH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbS-X3-Pax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740.5797101449277" y="-307.36607142857139"/>
+        </scene>
+        <!--Post something-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="prototypeChattyFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzJ-wc-OvG">
+                                <rect key="frame" x="38" y="461" width="339" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rP-Nh-182">
+                                <rect key="frame" x="38" y="153" width="339" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQc-h8-RNv">
+                                <rect key="frame" x="38" y="568" width="339" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Post something" image="plus" catalog="system" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Your Liked Posts-->
+        <scene sceneID="A7L-wE-8AC">
+            <objects>
+                <viewController id="RFT-YA-oi6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hye-Cr-aDt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IdV-m7-GSR">
+                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="6Vi-Df-g0w"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1pZ-Yl-c0q"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IdV-m7-GSR" firstAttribute="leading" secondItem="hku-TR-jPY" secondAttribute="leading" constant="20" id="6Z5-92-uj1"/>
+                            <constraint firstItem="hku-TR-jPY" firstAttribute="trailing" secondItem="IdV-m7-GSR" secondAttribute="trailing" constant="20" id="Yjg-gd-kBN"/>
+                            <constraint firstItem="IdV-m7-GSR" firstAttribute="bottom" secondItem="hku-TR-jPY" secondAttribute="bottom" id="exL-cF-acq"/>
+                            <constraint firstItem="IdV-m7-GSR" firstAttribute="top" secondItem="hku-TR-jPY" secondAttribute="top" id="ssh-tH-upE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hku-TR-jPY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Your Liked Posts" image="heart" catalog="system" id="rQX-Wi-4QD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHE-ny-zT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766.66666666666674" y="1093.5267857142856"/>
+        </scene>
+        <!--ChattyFoods-->
+        <scene sceneID="Rph-6k-YLn">
+            <objects>
+                <viewController id="K1i-Ks-ZEe" customClass="ChooseAvatarViewController" customModule="prototypeChattyFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UB9-pm-q0D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="e64-Gp-Elb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ChattyFoods" id="GLY-Fc-Fjm"/>
+                    <connections>
+                        <segue destination="Q6G-Z6-giZ" kind="show" identifier="toWhoToFollow" id="qPr-FO-PuS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZD-Ky-hDv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2570" y="-74"/>
+        </scene>
+        <!--ChattyFoods-->
+        <scene sceneID="fCi-HH-2JF">
+            <objects>
+                <viewController id="Q6G-Z6-giZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zQg-j4-sGw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="BAR-fn-zck">
+                                <rect key="frame" x="20" y="108" width="374" height="480"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="106" translatesAutoresizingMaskIntoConstraints="NO" id="2DS-un-cwI" userLabel="UserPickStack">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7715164b3215cccda8f7994f9ca25d8e_clipart-face-carrot-clipart-face-carrot-transparent-free-for-_806-1084.png" translatesAutoresizingMaskIntoConstraints="NO" id="UXK-MD-eH0">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="5ba-Z0-Aab"/>
+                                                    <constraint firstAttribute="width" constant="100" id="qSF-7J-5je"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who will you follow? " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Vi-U8-lZ4">
+                                                <rect key="frame" x="206" y="40" width="168" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.72941176470000002" green="0.94901960780000005" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-Hu-A3P">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="340"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h0i-uG-1Ab" userLabel="Stack View Mid">
+                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="340"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAj-26-uH9" customClass="buttonz" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="900" constant="44" id="IaV-31-Yd6"/>
+                                                            <constraint firstAttribute="height" constant="100" id="i8z-iN-eTo"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="images-6.jpeg"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmP-cu-cuU" customClass="buttonz" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="120" width="124.5" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="SZh-Tv-eJf"/>
+                                                            <constraint firstAttribute="height" constant="100" id="eqe-9Y-kfW"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="salmon.jpg"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPe-PN-4Fg" customClass="buttonz" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="240" width="124.5" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Ra6-XI-H24"/>
+                                                            <constraint firstAttribute="height" constant="100" id="vjn-58-F4M"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="blur-close-up-corn-603030.jpg"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qt9-3n-U9V" userLabel="Stack View Right">
+                                                <rect key="frame" x="124.5" y="0.0" width="125" height="340"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jA-4h-kuB" customClass="buttonz" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="E3Z-Xv-fa4"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="MvC-bd-f4L"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="rice.jpeg"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHr-8c-4o4" customClass="buttonz" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="120" width="125" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="bXl-ug-e1O"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="dZ2-bD-Al8"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="broccoli.jpg"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaT-61-jZe" customClass="buttonz" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="240" width="125" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="Doa-On-iXY"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="toE-Fk-3cT"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="62169851.jpg"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="djN-gd-b88" userLabel="Stack View Left">
+                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="340"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwL-3c-0gX" customClass="buttonz" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="8jm-e8-uJB"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="iLs-gW-AZF"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="egg.jpg"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sn0-7j-rWD" customClass="buttonz" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="120" width="124.5" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="900" constant="44" id="r9H-Q3-8eI"/>
+                                                            <constraint firstAttribute="height" constant="100" id="tW3-Ux-dRa"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="chicken.jpeg"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eF-Ju-O3B" customClass="buttonz" customModule="prototypeChattyFoods" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="240" width="124.5" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="ZSl-0X-KGv"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="u8d-K5-Uad"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="milk.jpg"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLO-At-vM9">
+                                <rect key="frame" x="139" y="417" width="135" height="61"/>
+                                <color key="backgroundColor" red="0.72941176470000002" green="0.94901960780000005" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="See your news feed">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="akd-Pq-dvS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BAR-fn-zck" firstAttribute="leading" secondItem="dOC-lb-JaF" secondAttribute="leading" constant="20" id="5HG-Bx-1vS"/>
+                            <constraint firstItem="qLO-At-vM9" firstAttribute="trailing" secondItem="BAR-fn-zck" secondAttribute="trailing" id="Djt-BC-Yy3"/>
+                            <constraint firstItem="qLO-At-vM9" firstAttribute="top" secondItem="BAR-fn-zck" secondAttribute="bottom" constant="20" id="PyU-OV-pQW"/>
+                            <constraint firstItem="BAR-fn-zck" firstAttribute="top" secondItem="dOC-lb-JaF" secondAttribute="top" constant="20" id="X6d-20-XLN"/>
+                            <constraint firstItem="qLO-At-vM9" firstAttribute="leading" secondItem="BAR-fn-zck" secondAttribute="leading" id="jTK-KC-Q0g"/>
+                            <constraint firstItem="dOC-lb-JaF" firstAttribute="trailing" secondItem="BAR-fn-zck" secondAttribute="trailing" constant="20" id="qDU-Hu-x72"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dOC-lb-JaF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ChattyFoods" id="wA5-39-gAi">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hideBackButton" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kvr-ia-dZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1526.0869565217392" y="-74.330357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NXR-sy-rfi">
+            <objects>
+                <navigationController id="108-Fr-B6n" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="7715164b3215cccda8f7994f9ca25d8e_clipart-face-carrot-clipart-face-carrot-transparent-free-for-_806-1084.png" id="lnR-lW-wiu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="K1i-Ks-ZEe" kind="relationship" relationship="rootViewController" id="SUy-XE-y7n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BxE-Cp-afg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3586" y="-74"/>
+        </scene>
+        <!--ChattyFoods-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="ChattyFoods" id="eeD-B1-Tvl">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hideBackButton" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -88,15 +444,29 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="RFT-YA-oi6" kind="relationship" relationship="viewControllers" id="6zt-mY-x5A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-481" y="-73"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="62169851.jpg" width="203.18400573730469" height="233.27999877929688"/>
+        <image name="7715164b3215cccda8f7994f9ca25d8e_clipart-face-carrot-clipart-face-carrot-transparent-free-for-_806-1084.png" width="193.44000244140625" height="260.16000366210938"/>
+        <image name="blur-close-up-corn-603030.jpg" width="600" height="400"/>
+        <image name="broccoli.jpg" width="555" height="400"/>
+        <image name="chicken.jpeg" width="144" height="96"/>
+        <image name="egg.jpg" width="275" height="183"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="images-6.jpeg" width="179" height="282"/>
+        <image name="milk.jpg" width="2237" height="1704"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="rice.jpeg" width="142.55999755859375" height="119.76000213623047"/>
+        <image name="salmon.jpg" width="600" height="400"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>
