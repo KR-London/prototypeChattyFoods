@@ -32,13 +32,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oco-gF-e12">
-                                <rect key="frame" x="0.0" y="49" width="414" height="810"/>
+                                <rect key="frame" x="0.0" y="59" width="414" height="788"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oco-gF-e12" secondAttribute="height" multiplier="1:1" id="awg-mP-AKx"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lfu-0c-P6C">
-                                <rect key="frame" x="167" y="49" width="80" height="80"/>
+                                <rect key="frame" x="167" y="59" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="M7W-i9-gQQ"/>
                                     <constraint firstAttribute="width" constant="80" id="M9m-Qs-cG8"/>
@@ -49,8 +49,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <view alpha="0.75" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sju-Ve-dQg" userLabel="BackingColour">
+                                <rect key="frame" x="87" y="772" width="240" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="AR4-7I-1D0" userLabel="buttonStack">
-                                <rect key="frame" x="59" y="797" width="296" height="60"/>
+                                <rect key="frame" x="59" y="777" width="296" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-Ts-5QY" customClass="postButton" customModule="prototypeChattyFoods" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -77,18 +86,28 @@
                                         <state key="normal" image="pencil.and.ellipsis.rectangle" catalog="system"/>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="AR4-7I-1D0" firstAttribute="bottom" secondItem="oco-gF-e12" secondAttribute="bottom" constant="-10" id="0fP-hm-gUK"/>
+                            <constraint firstItem="Sju-Ve-dQg" firstAttribute="bottom" secondItem="AR4-7I-1D0" secondAttribute="bottom" constant="5" id="4NI-d2-n2B"/>
+                            <constraint firstItem="Sju-Ve-dQg" firstAttribute="leading" secondItem="oco-gF-e12" secondAttribute="leading" id="AaI-3U-qAg"/>
                             <constraint firstItem="Lfu-0c-P6C" firstAttribute="top" secondItem="oco-gF-e12" secondAttribute="top" id="JJ6-ft-zJI"/>
-                            <constraint firstItem="BuV-yU-IPc" firstAttribute="bottom" secondItem="AR4-7I-1D0" secondAttribute="bottom" constant="5" id="cJv-N9-h6l"/>
+                            <constraint firstItem="BuV-yU-IPc" firstAttribute="bottom" secondItem="AR4-7I-1D0" secondAttribute="bottom" constant="25" id="cJv-N9-h6l"/>
                             <constraint firstItem="AR4-7I-1D0" firstAttribute="centerX" secondItem="BuV-yU-IPc" secondAttribute="centerX" id="e7c-fl-F7C"/>
-                            <constraint firstItem="oco-gF-e12" firstAttribute="top" secondItem="BuV-yU-IPc" secondAttribute="top" constant="5" id="gMf-91-2Ip"/>
+                            <constraint firstItem="oco-gF-e12" firstAttribute="top" secondItem="BuV-yU-IPc" secondAttribute="top" constant="15" id="gMf-91-2Ip"/>
                             <constraint firstItem="oco-gF-e12" firstAttribute="width" secondItem="BuV-yU-IPc" secondAttribute="width" id="hDB-F9-GLn"/>
                             <constraint firstItem="AR4-7I-1D0" firstAttribute="width" secondItem="BuV-yU-IPc" secondAttribute="width" multiplier="0.67" priority="750" id="idG-gg-jiS"/>
                             <constraint firstItem="oco-gF-e12" firstAttribute="width" secondItem="BuV-yU-IPc" secondAttribute="width" id="jg2-e2-DxF"/>
+                            <constraint firstItem="Sju-Ve-dQg" firstAttribute="trailing" secondItem="oco-gF-e12" secondAttribute="trailing" id="jpd-1d-11k"/>
+                            <constraint firstItem="Sju-Ve-dQg" firstAttribute="top" secondItem="AR4-7I-1D0" secondAttribute="top" constant="-5" id="nNB-rV-igw"/>
                             <constraint firstItem="Lfu-0c-P6C" firstAttribute="leading" secondItem="oco-gF-e12" secondAttribute="leading" id="opt-Gb-KOo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BuV-yU-IPc"/>
@@ -383,9 +402,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="0OB-6i-Owz"/>
                                 </constraints>
-                                <state key="normal" title="Check Out Frank's Feed">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Check Out Frank's Feed"/>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="show" id="akd-Pq-dvS"/>
                                 </connections>

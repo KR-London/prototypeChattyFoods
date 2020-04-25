@@ -149,7 +149,7 @@ class avatarCustomiseViewController: UIViewController, UITextFieldDelegate {
         //moveOnButton.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         //moveOnButton.cornerRadius = 30
         moveOnButton.setTitle("Finished Here", for: .normal)
-        moveOnButton.setTitleColor(UIColor.black, for: .normal)
+        //moveOnButton.setTitleColor(UIColor.black, for: .normal)
         moveOnButton.addTarget(self, action: #selector(doneHere), for: .touchUpInside)
         
         stack.isUserInteractionEnabled = true

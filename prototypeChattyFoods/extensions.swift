@@ -206,7 +206,7 @@ class myButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
-        
+        setColorScheme()
        
       //  fatalError("init(coder:) has not been implemented")
     }
@@ -214,12 +214,14 @@ class myButton: UIButton {
     private func setup() {
         layer.cornerRadius = 10
         layer.borderWidth = 1
+        layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         self.layer.shadowColor = UIColor.black.cgColor
                self.layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
                self.layer.shadowRadius = 8
                self.layer.shadowOpacity = 0.5
                self.layer.masksToBounds = false
         self.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(rawValue: 600))
+       // self.titleLabel?.font = self.titleLabel?.font(.c)
     }
 
     private func setColorScheme() {
@@ -228,7 +230,8 @@ class myButton: UIButton {
         self.titleLabel!.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(rawValue: 600))
         //UIFont(name: "TwCenMT-CondensedExtraBold", size: 24 )
         self.tintColor = UIColor(red: 3/255, green: 18/255, blue: 8/255, alpha: 1)
-        self.setTitleColor( (UIColor(red: 3/255, green: 18/255, blue: 8/255, alpha: 1)), for: .normal)
+        self.setTitleColor( UIColor.white, for: .normal)
+        //self.setTitleColor( (UIColor(red: 3/255, green: 18/255, blue: 8/255, alpha: 1)), for: .normal)
     }
 
 //   override func awakeFromNib() {

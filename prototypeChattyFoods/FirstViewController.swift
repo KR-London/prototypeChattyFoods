@@ -75,7 +75,7 @@ class FirstViewController: UIViewController {
             NSLayoutConstraint.activate([
                 postMatrix[x].view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
                 postMatrix[x].view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-                postMatrix[x].view.heightAnchor.constraint(equalTo: postMatrix[x].view.widthAnchor, constant: 10),
+                postMatrix[x].view.heightAnchor.constraint(equalTo: postMatrix[x].view.widthAnchor, constant: 30),
                 postMatrix[x].view.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor)
             ])
         

@@ -49,7 +49,7 @@ class ChooseAvatarViewController: UIViewController, iCarouselDelegate, iCarousel
         carousel.delegate = self
         carousel.type = .coverFlow
     
-        var label = myLabel(frame: CGRect(x: 0, y: 100, width: screenWidth, height: 150))
+        var label = myLabel(frame: CGRect(x: 0, y: 25, width: screenWidth, height: 150))
         label.center = CGPoint(x: screenWidth/2, y: 384)
 //        label.textAlignment = NSTextAlignment.center
 //        label.lineBreakMode = .byWordWrapping
@@ -64,7 +64,7 @@ class ChooseAvatarViewController: UIViewController, iCarouselDelegate, iCarousel
         
         let buttonWidth: CGFloat = 300
         let buttonHeight: CGFloat = 80
-        let frame = CGRect(x: (view.frame.width-buttonWidth)/2, y: (view.frame.height-buttonHeight)/2 + 100, width: buttonWidth, height: buttonHeight)
+        let frame = CGRect(x: (view.frame.width-buttonWidth)/2, y: (view.frame.height-buttonHeight)/2 + 150, width: buttonWidth, height: buttonHeight)
         
         var button = myButton(frame: frame)
         button.setTitle("I choose you!", for: .normal)
@@ -92,8 +92,8 @@ class ChooseAvatarViewController: UIViewController, iCarouselDelegate, iCarousel
         
         selectedCharacter.translatesAutoresizingMaskIntoConstraints = false
         //selectedCharacter.topAnchor.constraint(greaterThanOrEqualTo: label.bottomAnchor).isActive = true
-        selectedCharacter.bottomAnchor.constraint(lessThanOrEqualTo: button.topAnchor, constant: -20).isActive = true
-        selectedCharacter.topAnchor.constraint(greaterThanOrEqualTo: label.bottomAnchor, constant: 20).isActive = true
+        selectedCharacter.bottomAnchor.constraint(lessThanOrEqualTo: button.topAnchor, constant: -5).isActive = true
+        //selectedCharacter.topAnchor.constraint(greaterThanOrEqualTo: label.bottomAnchor, constant: 20).isActive = true
         selectedCharacter.heightAnchor.constraint(equalToConstant: 100).isActive = true
         selectedCharacter.centerXAnchor.constraint(equalTo: stack.centerXAnchor).isActive = true
         selectedCharacter.widthAnchor.constraint(equalToConstant: 100).isActive = true
@@ -102,6 +102,9 @@ class ChooseAvatarViewController: UIViewController, iCarouselDelegate, iCarousel
         
        // stack.distribution = .fillProportionally
         self.view.addSubview(stack)
+        
+        //stack.translatesAutoresizingMaskIntoConstraints = false
+        //stack.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor).isActive = true
 
        
 
